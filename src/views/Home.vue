@@ -46,7 +46,7 @@
             </div>
           </form>
         </div>
-        <div class='card-footer'>
+        <div class="card-footer">
           <button @click='addToCart(product)' class='btn btn-light'>
             Add to cart
           </button>
@@ -57,15 +57,10 @@
 </template>
 
 <script>
-import food from '../food.json'
 
 export default {
   name: 'HomeView',
-  data () {
-    return {
-      inventory: food
-    }
-  },
+  props: ['inventory'],
   components: {}
 }
 </script>

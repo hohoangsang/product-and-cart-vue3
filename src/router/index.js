@@ -1,23 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ProductView from '../views/ProductView.vue'
-import PastOrderView from '../views/PastOrdersView.vue'
+import Home from '../views/Home.vue'
+import Product from '../views/Product.vue'
+import PastOrder from '../views/PastOrders.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HomeView
+    component: Home
   },
   {
     path: '/product',
     name: 'Product',
-    component: ProductView
+    component: Product
   },
   {
     path: '/past-orders',
     name: 'PastOrders',
-    component: PastOrderView
+    component: PastOrder
   }
 ]
 
