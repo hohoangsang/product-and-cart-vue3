@@ -23,11 +23,11 @@
               </thead>
               <tbody>
                 <tr v-for='(product, key, i) in cart' :key='i'>
-                  <td><i class='icofont-carrot icofont-3x'></i></td>
+                  <td><i :class="`icofont-${product.icon} icofont-3x`"></i></td>
                   <td>{{ key }}</td>
-                  <td>\${{ product.price.USD }}</td>
+                  <td>${{ product.price.USD }}</td>
                   <td class='center'>{{ product.quantity }}</td>
-                  <td>\${{ totalProductPrice(key) }}</td>
+                  <td>${{ totalProductPrice(key) }}</td>
                   <td class='center'>
                     <button class='btn btn-light cart-remove' @click='removeFromCart(key)'>
                       &times;
@@ -39,7 +39,7 @@
 
             <p class='center' v-if='!Object.keys(cart).length'><em>No items in cart</em></p>
             <div class='spread'>
-              <span><strong>Total:</strong> \${{ totalCartPrice() }}</span>
+              <span><strong>Total:</strong> ${{ totalCartPrice() }}</span>
               <button class='btn btn-light'>Checkout</button>
             </div>
           </div>
@@ -67,8 +67,8 @@ export default {
       const result = productArr.reduce((sum, product) => {
         return sum += this.totalProductPrice(product)
       }, 0)
-      return result;
+      return Number(result.toFixed(2));
     }
-  }
+  },
 }
 </script>

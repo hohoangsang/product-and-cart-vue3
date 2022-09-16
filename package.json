@@ -51,7 +51,10 @@
       "vue/strongly-recommended": "off",
       "vue/vue3-recommended": "off",
       "vue/recommended": "off",
-      "vue/no-mutating-props": "off"
+      "vue/no-mutating-props": "off",
+      "no-return-assign": "off",
+      "indent": "off",
+      "comma-dangle": "off"
     }
   },
   "browserslist": [
